@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attendance Management</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <script defer src="script.js">
+    function validate()
+    {
+      var finame=document.getElementById("firstName");
+      var laname=document.getElementById("lastName");
+      if(finame.value.trim() ==""||laname.value.trim()=="")
+      {
+        alert("Its Empty just like your Brain bro ");
+        return false;
+      }
+      else
+      {
+         true;
+      }
+    }
+    </script>
+  </head> 
+  <body>
+    <div>
+      <h1 style="color:white;font-size: 50px;">Hello</h1>
+    </div>
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h1>Attendance Management</h1>
+          </div>
+          <div class="panel-body">
+            <form onsubmit="return validate()" action="connect.php" method="post">
+              <div class="form-group">
+                <label for="EmpID">Employee ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  required
+                />
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Attendance</label>
+                <div>
+                  <label for="male" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="m"
+                      id="male"
+                    />Present</label
+                  >
+                  <label for="female" class="radio-inline"
+                    ><input
+                      type="radio"
+                      name="gender"
+                      value="f"
+                      id="female"
+                    />Absent</label
+                  >   
+                </div>
+              </div>
+              <input type="submit" class="btn btn-primary" />
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+            <small>&copy; Adithya Velu</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <button onclick="validate()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+  </div>
+</div>
+  </body>
+</html>
